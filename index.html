@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Record Manager | System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="container page-header">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="system-window">
+          <p class="notice">[ System ]</p>
+          <h1>Class Record Manager</h1>
+          <p class="sub">You have been chosen to manage the roster.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <div class="row g-4">
+
+      <div class="col-12 col-lg-4">
+        <section class="sys-card h-100" id="display-section">
+          <h2>Student Roster</h2>
+          <ol id="student-list" class="student-list"></ol>
+          <p class="count">Students registered: <strong id="list-length">0</strong></p>
+        </section>
+      </div>
+
+      <div class="col-12 col-lg-8">
+        <div class="row g-4">
+
+          <div class="col-12">
+            <section class="sys-card">
+              <h2>Add Student</h2>
+              <div class="controls">
+                <input type="text" id="add-input" placeholder="Enter student name (letters only)">
+                <button type="button" id="add-btn">Add</button>
+              </div>
+              <p class="message" id="add-message"></p>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <section class="sys-card h-100">
+              <h2>Remove Last Student</h2>
+              <div class="controls">
+                <button type="button" id="remove-btn" class="danger">Remove Last</button>
+              </div>
+              <p class="message" id="remove-message"></p>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <section class="sys-card h-100">
+              <h2>Find Student</h2>
+              <div class="controls">
+                <input type="number" id="find-input" placeholder="Index 0 (first) ">
+                <button type="button" id="find-btn">Find</button>
+              </div>
+              <p class="message" id="find-message"></p>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <section class="sys-card h-100">
+              <h2>Join Students</h2>
+              <div class="controls">
+                <select id="separator-select">
+                  <option value=" | ">Pipe ( | )</option>
+                  <option value=" - ">Dash ( - )</option>
+                </select>
+                <button type="button" id="join-btn">Join</button>
+              </div>
+              <p class="message" id="join-message"></p>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <section class="sys-card h-100">
+              <h2>Export Roster Data</h2>
+              <div class="controls">
+                <button type="button" id="tostring-btn">Convert to String</button>
+              </div>
+              <p class="message" id="tostring-message"></p>
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>FINALS-LAB2 2IT-B GROUP 11 | CCS 114 - WEBTECH</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
